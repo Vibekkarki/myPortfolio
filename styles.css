@@ -879,6 +879,14 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    .hero-content p {
+        font-size: 14px;
+        line-height: 1.4;
+        word-wrap: break-word;
+        white-space: normal;
+        text-align: center;
+        padding: 0 10px;
+    }
     .modal-content {
         width: 95%;
         margin: 10% auto;
