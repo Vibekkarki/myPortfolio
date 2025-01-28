@@ -57,7 +57,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 "MongoDB",
                 "Express"
             ]
-        }
+        },
+        gadgetstation:{
+            title: "GadgetStation",
+            description: "An e-commerce platform for electronic gadgets built with C#, ASP.NET, and SQL Server. It offers user authentication, product browsing with search and filter options, a shopping cart, and order management. The admin panel provides tools for managing products, users, orders, inventory, and sales analytics, ensuring seamless operations across the platform.",
+            images: [
+              "images/gadgetstation1.png",
+              "images/gadgetstation2.png",
+              "images/gadgetstation3.png",
+              "images/gadgetstation4.png",
+              "images/gadgetstation5.png",
+              "images/gadgetstation6.png",
+              "images/gadgetstation7.png",
+              "images/gadgetstation8.png",
+              "images/gadgetstation9.png",
+              "images/gadgetstation10.png"
+            ],
+            technologies: [
+              "C#",
+              "ASP.NET",
+              "SQL Server",
+              "HTML/CSS",
+              "JavaScript"
+            ]
+          }
+          
     };
 
     const modal = document.getElementById('projectModal');
