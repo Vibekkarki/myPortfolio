@@ -24,6 +24,149 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     this.reset();
 });
 
+//modal
+document.addEventListener('DOMContentLoaded', () => {
+    const projectData = {
+        swiftdeals: {
+            title: "Swift Deals",
+            description: "An Android e-commerce app with Firebase authentication and real-time database management. Features include add to cart, delete from cart, and secure user authentication.",
+            images: [
+                "images/swift1.png",
+                "images/swift2.png",
+                "images/swift3.png",
+                "images/swift4.png"
+            ],
+            technologies: [
+                "Android",
+                "Java",
+                "Firebase",
+                "Authentication"
+            ]
+        },
+        trackit: {
+            title: "TrackIt",
+            description: "A Trello-inspired project management application built with React.js, Node.js, MongoDB, and JavaScript. It features boards, lists, and cards for efficient task organization and seamless user experience.",
+            images: [
+                "images/hero-image1.jpg",
+                "images/hero-image1.jpg",
+                "images/hero-image1.jpg"
+            ],
+            technologies: [
+                "React.js",
+                "Node.js",
+                "MongoDB",
+                "Express"
+            ]
+        }
+    };
+
+    const modal = document.getElementById('projectModal');
+    const modalContent = modal.querySelector('.modal-content');
+    const modalTitle = document.getElementById('modalTitle');
+    const slider = document.querySelector('.slider');
+    const description = document.getElementById('projectDescription');
+    const technologiesList = document.getElementById('projectTechnologies');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    let currentProject = '';
+    let currentSlide = 0;
+
+    document.querySelectorAll('.view-project').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            currentProject = this.getAttribute('data-project');
+            openModal(currentProject);
+        });
+    });
+
+    function openModal(projectKey) {
+        const project = projectData[projectKey];
+
+        modalTitle.textContent = project.title;
+        description.textContent = project.description;
+
+        slider.innerHTML = '';
+        project.images.forEach(imgSrc => {
+            const img = document.createElement('img');
+            img.src = imgSrc;
+            slider.appendChild(img);
+        });
+
+        technologiesList.innerHTML = '';
+        project.technologies.forEach(tech => {
+            const li = document.createElement('li');
+            li.textContent = tech;
+            technologiesList.appendChild(li);
+        });
+
+        modal.style.display = 'block';
+        modalContent.style.overflowY = 'auto'; // Enable vertical scrolling for modal
+        modalContent.style.maxHeight = '80vh'; // Limit modal height to prevent overflow
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        currentSlide = 0;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        const slides = slider.querySelectorAll('img');
+        slides.forEach((slide, index) => {
+            slide.style.display = index === currentSlide ? 'block' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        const slides = slider.querySelectorAll('img');
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        const slides = slider.querySelectorAll('img');
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    // Swipe detection for touch devices
+    let startX;
+    slider.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    slider.addEventListener('touchend', e => {
+        const diffX = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diffX) > 50) {
+            diffX > 0 ? nextSlide() : prevSlide();
+        }
+    });
+
+    document.querySelector('.close').addEventListener('click', closeModal);
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Enable scrolling within the modal content
+
+    modalContent.addEventListener('wheel', (e) => {
+
+        e.stopPropagation();
+
+    });
+    
+});
+
+
+
+
+
 // Refined scroll reveal animation
 function reveal() {
     var reveals = document.querySelectorAll('.reveal');

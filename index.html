@@ -124,37 +124,56 @@
         <section id="projects">
             <h2 class="parallax" data-speed="2">Featured Projects</h2>
             <div class="project-grid">
-                <div class="project-card">
+                <!-- Project 1 -->
+                <div class="project-card" data-project="swiftdeals">
                     <div class="project-image">
-                        <img src="images/hero-image1.jpg" alt="Project 1">
+                        <img src="images/swift0.png" alt="Swift Deals">
                     </div>
                     <div class="project-info">
                         <h3>Swift Deals</h3>
-                        <p>Ecommerce app with Firebase database used with various features like add to cart delete the cart. Login is authenticated with firebase authentication. Technologies used: Android, Java</p>
+                        <p>Ecommerce app with Firebase database used with various features like add to cart delete the cart. Login is authenticated with firebase authentication.</p>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-eye"></i> View Project</a>
+                            <a href="#" class="project-link view-project" data-project="swiftdeals"><i class="fas fa-eye"></i> View Project</a>
                             <a href="https://github.com/Vibekkarki/EcommerceAndroidApp" class="project-link"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+        
+                <!-- Project 2 -->
+                <div class="project-card" data-project="trackit">
                     <div class="project-image">
-                        <img src="images/hero-image1.jpg" alt="Project 2">
+                        <img src="images/hero-image1.jpg" alt="TrackIt">
                     </div>
                     <div class="project-info">
                         <h3>TrackIt</h3>
-                        <p>
-                            Built "TrackIt," a Trello-inspired project management app using React.js, Node.js, MongoDB, and JavaScript. It features boards, lists, and cards for efficient task organization and seamless user experience.
-                        </p>
+                        <p>Built "TrackIt," a Trello-inspired project management app using React.js, Node.js, MongoDB, and JavaScript. It features boards, lists, and cards for efficient task organization and seamless user experience.</p>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-eye"></i> View Project</a>
+                            <a href="#" class="project-link view-project" data-project="trackit"><i class="fas fa-eye"></i> View Project</a>
                             <a href="https://github.com/Vibekkarki/Capstone4_BackEnd" class="project-link"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
-                <!-- Add more project cards as needed -->
+            </div>
+        
+            <!-- Modal Template -->
+            <div id="projectModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modalTitle"></h2>
+                    <div class="slider-container">
+                        <div class="slider"></div>
+                        <button class="prev">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
+                    <div class="project-details">
+                        <p id="projectDescription"></p>
+                        <h4>Technologies Used:</h4>
+                        <ul id="projectTechnologies"></ul>
+                    </div>
+                </div>
             </div>
         </section>
+        
 
         <section id="contact">
             <h2 class="parallax" data-speed="2">Let's Connect</h2>

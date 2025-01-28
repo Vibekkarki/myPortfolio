@@ -664,3 +664,238 @@ footer {
         display: block;
     }
 }
+/* .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
+.close {
+    color: var(--primary-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--accent-color);
+}
+
+.slider-container {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.project-details {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+
+    .slider img {
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .project-details {
+        padding: 10px;
+    }
+} */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    margin: 5% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    color: var(--text-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.close {
+    color: var(--primary-color);
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--accent-color);
+}
+
+#modalTitle {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 600px;
+    height: 300px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.slider {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background-color: var(--primary-color); */
+    color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.project-details {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#projectDescription {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#projectTechnologies {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#projectTechnologies li {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: transform 0.3s ease;
+}
+
+#projectTechnologies li:hover {
+    transform: translateY(-3px);
+    background-color: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+
+    .slider-container {
+        height: 200px;
+    }
+
+    #modalTitle {
+        font-size: 1.8em;
+    }
+
+    .prev, .next {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
