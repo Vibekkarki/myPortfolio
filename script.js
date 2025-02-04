@@ -127,9 +127,28 @@ document.addEventListener('DOMContentLoaded', () => {
               "jQuery",
               "SQL Server"
             ]
-        }
-        
-        
+        },
+
+        quarterlysales: {
+            title: "Quarterly Sales App",
+            description: "An ASP.NET Core MVC application for managing quarterly sales data. Features include employee management, sales tracking by manager, and advanced search functionality for sales by year, quarter, or employee name. Utilizes local SQL Server for data storage and retrieval.",
+            images: [
+              "images/quarterlysales1.png",
+              "images/quarterlysales2.png",
+              "images/quarterlysales3.png",
+              "images/quarterlysales4.png",
+              "images/quarterlysales5.png"
+            ],
+            technologies: [
+              "ASP.NET Core MVC",
+              "C#",
+              "SQL Server",
+              "Entity Framework Core",
+              "HTML/CSS",
+              "Bootstrap",
+              "JavaScript"
+            ]
+        }        
           
     };
 
