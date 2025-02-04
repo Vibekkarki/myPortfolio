@@ -80,7 +80,56 @@ document.addEventListener('DOMContentLoaded', () => {
               "HTML/CSS",
               "JavaScript"
             ]
-          }
+          },
+          deadrobot: {
+            title: "DeadRobot Restaurant",
+            description: "An innovative Android restaurant management app built with Kotlin, featuring robot integration for automated service. The app offers a comprehensive suite of features including digital menu management, order tracking, table reservations, and real-time updates. The unique robot integration allows for automated order delivery and enhanced customer experience. The admin panel provides tools for menu updates, staff management, and performance analytics, ensuring smooth operations and efficient service delivery.",
+            images: [
+              "images/deadrobotlogin.png",
+              "images/deadrobot1.png",
+              "images/deadrobot2.png",
+              "images/deadrobot3.png",
+              "images/deadrobot4.png",
+              "images/deadrobot5.png",
+              "images/deadrobot6.png",
+              "images/deadrobot7.png"
+            ],
+            technologies: [
+              "Kotlin",
+              "Android SDK",
+              "Room Database",
+              "Retrofit",
+              "Robot SDK",
+              "Firebase",
+              "Jetpack Navigation",
+              "MVVM Architecture"
+            ]
+        },
+        fujitech: {
+            title: "Fuji Tech Nepal Website",
+            description: "Developed the official website for Fuji Tech Nepal Pvt. Ltd., a software development company. This responsive website showcases the company's services, portfolio, and contact information. Built with ASP.NET MVC, it features a clean, professional design with smooth navigation and optimized performance. The site includes dynamic content management, a service showcase, portfolio section, and a contact form with server-side validation. SEO optimization and social media integration enhance the company's online presence.",
+            images: [
+              "images/fujitechnepal1.png",
+              "images/fujitechnepal2.png",
+              "images/fujitechnepal3.png",
+              "images/fujitechnepal4.png",
+              "images/fujitechnepal5.png",
+              "images/fujitechnepal6.png",
+              "images/fujitechnepal7.png"
+            ],
+            technologies: [
+              "C#",
+              "ASP.NET MVC",
+              "HTML5",
+              "CSS3",
+              "Bootstrap",
+              "JavaScript",
+              "jQuery",
+              "SQL Server"
+            ]
+        }
+        
+        
           
     };
 
