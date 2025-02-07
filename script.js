@@ -47,9 +47,15 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "TrackIt",
             description: "A Trello-inspired project management application built with React.js, Node.js, MongoDB, and JavaScript. It features boards, lists, and cards for efficient task organization and seamless user experience.",
             images: [
-                "images/hero-image1.jpg",
-                "images/hero-image1.jpg",
-                "images/hero-image1.jpg"
+                "images/trackIt.png",
+                "images/trackIt1.png",
+                "images/trackIt2.png",
+                "images/trackIt3.png",
+                "images/trackIt4.png",
+                "images/trackIt5.png",
+                "images/trackIt6.png",
+                "images/trackIt7.png",
+                "images/trackIt8.png"
             ],
             technologies: [
                 "React.js",
