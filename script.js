@@ -435,4 +435,40 @@ function revealExperience() {
     }
 }
 
+   // Initialize EmailJS with your user ID
+   emailjs.init("KALZ86-s_ZR_Hk2pO");
+
+   // Handle the form submission
+   document.getElementById("contact-form").addEventListener("submit", function(event) {
+       event.preventDefault(); // Prevent form submission
+
+       // Get form data
+       let name = document.getElementById("name").value.trim();
+       let email = document.getElementById("email").value.trim();
+       let message = document.getElementById("message").value.trim();
+
+       if (!name || !email || !message) {
+           alert("Please fill in all fields.");
+           return;
+       }
+
+       // Prepare EmailJS data
+       const templateParams = {
+           from_name: name,
+           from_email: email,
+           message: message
+       };
+
+       // Send email using EmailJS
+       emailjs.send("service_kk546z3", "template_pu8n2yv", templateParams)
+       .then(function(response) {
+           alert("Message sent successfully! I'll get back to you soon.");
+           document.getElementById("contact-form").reset();
+       }, function(error) {
+           alert("Oops! Something went wrong. Please try again.");
+           console.error("EmailJS Error:", error);
+       });
+   });
+
+
 window.addEventListener("scroll", revealExperience);
