@@ -282,7 +282,7 @@ function reveal() {
     });
 }
 
-// Add 'reveal' class to elements you want to animate on scroll
+// Add 'reveal' class to elements to animate on scroll
 document.querySelectorAll('section > *:not(.hero *)').forEach(el => {
     el.classList.add('reveal');
 });
@@ -317,13 +317,13 @@ window.addEventListener('scroll', function() {
 document.querySelector('.profile-photo').classList.add('float');
 
 // Cursor glow effect
-const cursorGlow = document.getElementById('cursor-glow');
+// const cursorGlow = document.getElementById('cursor-glow');
 
-document.addEventListener('mousemove', (e) => {
-    const x = e.clientX - 150;
-    const y = e.clientY - 150;
-    cursorGlow.style.transform = `translate(${x}px, ${y}px)`;
-});
+// document.addEventListener('mousemove', (e) => {
+//     const x = e.clientX - 150;
+//     const y = e.clientY - 150;
+//     cursorGlow.style.transform = `translate(${x}px, ${y}px)`;
+// });
 
 // Enhanced parallax effect
 document.addEventListener('mousemove', (e) => {
